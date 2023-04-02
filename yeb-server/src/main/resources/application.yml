@@ -1,0 +1,35 @@
+server:
+  port: 8081
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/yeb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    hikari:
+      pool-name: DateHikariCP
+      # 最小休闲连接数
+      minimum-idle: 5
+      # 空闲连接存活最大时间 3分钟
+      idle-timeout: 180000
+      # 最大连接数
+      maximum-pool-size: 10
+      # 从连接池返回的连接自动提交
+      auto-commit: true
+      # 连接最大存活时间 30分钟
+      max-lifetime: 1800000
+      # 测试连接是否可用的查询语句
+      connection-test-query: SELECT 1
+      # 连接超时时间 30s
+      connection-timeout: 30000
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  type-aliases-package: com.yeb.pojo
+
+# SQL打印（方法接口所在包）
+logging:
+  level:
+    com.yeb.server.mapper: debug

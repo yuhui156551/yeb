@@ -8,7 +8,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yeb</groupId>
-    <artifactId>yeb-server</artifactId>
+    <artifactId>yeb-generator</artifactId>
+    <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
 
@@ -19,16 +20,6 @@
     </properties>
 
     <dependencies>
-        <!-- Web依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!-- lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
         <!-- mysql -->
         <dependency>
             <groupId>mysql</groupId>
@@ -39,25 +30,19 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.3</version>
+            <version>3.4.1</version>
         </dependency>
-        <!-- processor -->
+        <!-- mybatis-plus代码生成器（旧） -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.4.1</version>
         </dependency>
-        <!-- Swagger2 -->
+        <!-- mybatis-plus代码生成器默认模板 -->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.7.0</version>
-        </dependency>
-        <!-- Swagger第三方ui依赖 -->
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>swagger-bootstrap-ui</artifactId>
-            <version>1.9.6</version>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.2</version>
         </dependency>
     </dependencies>
-
 </project>
