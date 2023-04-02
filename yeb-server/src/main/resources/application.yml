@@ -33,3 +33,14 @@ mybatis-plus:
 logging:
   level:
     com.yeb.server.mapper: debug
+
+# jwt
+jwt:
+  # jwt存储的请求头
+  tokenHeader: Authorization
+  # jwt加解密使用的秘钥
+  secret: yeb-secret
+  # 超期限时间（60*60*24）一天
+  expiration: 604800
+  # jwt负载中拿到开头
+  tokenHead: Bearer
