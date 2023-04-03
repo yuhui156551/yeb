@@ -1,7 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yeb.pojo.Joblevel;
+import com.yeb.domain.pojo.Joblevel;
 import com.yeb.mapper.JoblevelMapper;
 import com.yeb.service.IJoblevelService;
 import org.springframework.stereotype.Service;

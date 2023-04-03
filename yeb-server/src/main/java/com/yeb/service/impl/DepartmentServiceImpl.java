@@ -1,7 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yeb.pojo.Department;
+import com.yeb.domain.pojo.Department;
 import com.yeb.mapper.DepartmentMapper;
 import com.yeb.service.IDepartmentService;
 import org.springframework.stereotype.Service;

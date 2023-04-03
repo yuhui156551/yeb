@@ -1,7 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yeb.pojo.Salary;
+import com.yeb.domain.pojo.Salary;
 import com.yeb.mapper.SalaryMapper;
 import com.yeb.service.ISalaryService;
 import org.springframework.stereotype.Service;

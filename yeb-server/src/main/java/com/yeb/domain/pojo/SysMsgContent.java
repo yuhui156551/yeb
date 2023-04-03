@@ -1,4 +1,4 @@
-package com.yeb.pojo;
+package com.yeb.domain.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -20,9 +21,9 @@ import java.io.Serializable;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_sys_msg")
-@ApiModel(value="SysMsg对象", description="")
-public class SysMsg implements Serializable {
+@TableName("t_sys_msg_content")
+@ApiModel(value="SysMsgContent对象", description="")
+public class SysMsgContent implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,17 +31,14 @@ public class SysMsg implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "消息id")
-    private Integer mid;
+    @ApiModelProperty(value = "标题")
+    private String title;
 
-    @ApiModelProperty(value = "0表示群发消息")
-    private Integer type;
+    @ApiModelProperty(value = "内容")
+    private String message;
 
-    @ApiModelProperty(value = "这条消息是给谁的")
-    private Integer adminid;
-
-    @ApiModelProperty(value = "0 未读 1 已读")
-    private Integer state;
+    @ApiModelProperty(value = "创建时间")
+    private LocalDateTime createDate;
 
 
 }

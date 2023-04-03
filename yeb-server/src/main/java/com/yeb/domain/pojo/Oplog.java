@@ -1,4 +1,4 @@
-package com.yeb.pojo;
+package com.yeb.domain.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 /**
  * <p>
@@ -20,9 +21,9 @@ import java.io.Serializable;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_department")
-@ApiModel(value="Department对象", description="")
-public class Department implements Serializable {
+@TableName("t_oplog")
+@ApiModel(value="Oplog对象", description="")
+public class Oplog implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,20 +31,14 @@ public class Department implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "部门名称")
-    private String name;
+    @ApiModelProperty(value = "添加日期")
+    private LocalDate addDate;
 
-    @ApiModelProperty(value = "父id")
-    private Integer parentId;
+    @ApiModelProperty(value = "操作内容")
+    private String operate;
 
-    @ApiModelProperty(value = "路径")
-    private String depPath;
-
-    @ApiModelProperty(value = "是否启用")
-    private Boolean enabled;
-
-    @ApiModelProperty(value = "是否上级")
-    private Boolean isParent;
+    @ApiModelProperty(value = "操作员ID")
+    private Integer adminid;
 
 
 }

@@ -1,7 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yeb.pojo.MailLog;
+import com.yeb.domain.pojo.MailLog;
 import com.yeb.mapper.MailLogMapper;
 import com.yeb.service.IMailLogService;
 import org.springframework.stereotype.Service;

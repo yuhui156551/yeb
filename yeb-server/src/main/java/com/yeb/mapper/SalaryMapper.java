@@ -1,7 +1,7 @@
 package com.yeb.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yeb.pojo.Salary;
+import com.yeb.domain.pojo.Salary;
 
 /**
  * <p>

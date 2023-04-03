@@ -1,4 +1,4 @@
-package com.yeb.pojo;
+package com.yeb.domain.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -9,7 +9,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -21,9 +20,9 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_joblevel")
-@ApiModel(value="Joblevel对象", description="")
-public class Joblevel implements Serializable {
+@TableName("t_menu")
+@ApiModel(value="Menu对象", description="")
+public class Menu implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,14 +30,29 @@ public class Joblevel implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "职称名称")
+    @ApiModelProperty(value = "url")
+    private String url;
+
+    @ApiModelProperty(value = "path")
+    private String path;
+
+    @ApiModelProperty(value = "组件")
+    private String component;
+
+    @ApiModelProperty(value = "菜单名")
     private String name;
 
-    @ApiModelProperty(value = "职称等级")
-    private String titleLevel;
+    @ApiModelProperty(value = "图标")
+    private String iconCls;
 
-    @ApiModelProperty(value = "创建时间")
-    private LocalDateTime createDate;
+    @ApiModelProperty(value = "是否保持激活")
+    private Boolean keepAlive;
+
+    @ApiModelProperty(value = "是否要求权限")
+    private Boolean requireAuth;
+
+    @ApiModelProperty(value = "父id")
+    private Integer parentId;
 
     @ApiModelProperty(value = "是否启用")
     private Boolean enabled;

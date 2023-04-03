@@ -1,7 +1,7 @@
 package com.yeb.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yeb.pojo.Department;
+import com.yeb.domain.pojo.Department;
 
 /**
  * <p>

@@ -1,7 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yeb.pojo.SysMsgContent;
+import com.yeb.domain.pojo.SysMsgContent;
 import com.yeb.mapper.SysMsgContentMapper;
 import com.yeb.service.ISysMsgContentService;
 import org.springframework.stereotype.Service;

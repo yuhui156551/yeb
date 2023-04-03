@@ -1,7 +1,7 @@
 package com.yeb.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yeb.pojo.MailLog;
+import com.yeb.domain.pojo.MailLog;
 
 /**
  * <p>

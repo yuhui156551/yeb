@@ -1,7 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yeb.pojo.PoliticsStatus;
+import com.yeb.domain.pojo.PoliticsStatus;
 import com.yeb.mapper.PoliticsStatusMapper;
 import com.yeb.service.IPoliticsStatusService;
 import org.springframework.stereotype.Service;

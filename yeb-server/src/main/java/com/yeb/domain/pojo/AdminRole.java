@@ -1,4 +1,4 @@
-package com.yeb.pojo;
+package com.yeb.domain.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -9,7 +9,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -21,9 +20,9 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_sys_msg_content")
-@ApiModel(value="SysMsgContent对象", description="")
-public class SysMsgContent implements Serializable {
+@TableName("t_admin_role")
+@ApiModel(value="AdminRole对象", description="")
+public class AdminRole implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,14 +30,11 @@ public class SysMsgContent implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "标题")
-    private String title;
+    @ApiModelProperty(value = "用户id")
+    private Integer adminId;
 
-    @ApiModelProperty(value = "内容")
-    private String message;
-
-    @ApiModelProperty(value = "创建时间")
-    private LocalDateTime createDate;
+    @ApiModelProperty(value = "权限id")
+    private Integer rid;
 
 
 }

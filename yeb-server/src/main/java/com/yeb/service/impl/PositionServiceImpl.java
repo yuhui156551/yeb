@@ -1,7 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yeb.pojo.Position;
+import com.yeb.domain.pojo.Position;
 import com.yeb.mapper.PositionMapper;
 import com.yeb.service.IPositionService;
 import org.springframework.stereotype.Service;

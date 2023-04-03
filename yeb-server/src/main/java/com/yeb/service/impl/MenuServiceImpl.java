@@ -1,7 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yeb.pojo.Menu;
+import com.yeb.domain.pojo.Menu;
 import com.yeb.mapper.MenuMapper;
 import com.yeb.service.IMenuService;
 import org.springframework.stereotype.Service;

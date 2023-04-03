@@ -1,4 +1,4 @@
-package com.yeb.pojo;
+package com.yeb.domain.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -9,7 +9,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 /**
  * <p>
@@ -21,9 +20,9 @@ import java.time.LocalDate;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_appraise")
-@ApiModel(value="Appraise对象", description="")
-public class Appraise implements Serializable {
+@TableName("t_department")
+@ApiModel(value="Department对象", description="")
+public class Department implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,20 +30,20 @@ public class Appraise implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "员工id")
-    private Integer eid;
+    @ApiModelProperty(value = "部门名称")
+    private String name;
 
-    @ApiModelProperty(value = "考评日期")
-    private LocalDate appDate;
+    @ApiModelProperty(value = "父id")
+    private Integer parentId;
 
-    @ApiModelProperty(value = "考评结果")
-    private String appResult;
+    @ApiModelProperty(value = "路径")
+    private String depPath;
 
-    @ApiModelProperty(value = "考评内容")
-    private String appContent;
+    @ApiModelProperty(value = "是否启用")
+    private Boolean enabled;
 
-    @ApiModelProperty(value = "备注")
-    private String remark;
+    @ApiModelProperty(value = "是否上级")
+    private Boolean isParent;
 
 
 }

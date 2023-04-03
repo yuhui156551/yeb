@@ -1,7 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yeb.pojo.Oplog;
+import com.yeb.domain.pojo.Oplog;
 import com.yeb.mapper.OplogMapper;
 import com.yeb.service.IOplogService;
 import org.springframework.stereotype.Service;

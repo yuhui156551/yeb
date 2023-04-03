@@ -1,4 +1,4 @@
-package com.yeb.pojo;
+package com.yeb.domain.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -21,9 +21,9 @@ import java.time.LocalDate;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_oplog")
-@ApiModel(value="Oplog对象", description="")
-public class Oplog implements Serializable {
+@TableName("t_appraise")
+@ApiModel(value="Appraise对象", description="")
+public class Appraise implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,14 +31,20 @@ public class Oplog implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "添加日期")
-    private LocalDate addDate;
+    @ApiModelProperty(value = "员工id")
+    private Integer eid;
 
-    @ApiModelProperty(value = "操作内容")
-    private String operate;
+    @ApiModelProperty(value = "考评日期")
+    private LocalDate appDate;
 
-    @ApiModelProperty(value = "操作员ID")
-    private Integer adminid;
+    @ApiModelProperty(value = "考评结果")
+    private String appResult;
+
+    @ApiModelProperty(value = "考评内容")
+    private String appContent;
+
+    @ApiModelProperty(value = "备注")
+    private String remark;
 
 
 }

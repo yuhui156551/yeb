@@ -1,4 +1,4 @@
-package com.yeb.pojo;
+package com.yeb.domain.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -21,9 +21,9 @@ import java.time.LocalDate;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("t_employee_remove")
-@ApiModel(value="EmployeeRemove对象", description="")
-public class EmployeeRemove implements Serializable {
+@TableName("t_employee_train")
+@ApiModel(value="EmployeeTrain对象", description="")
+public class EmployeeTrain implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,20 +31,14 @@ public class EmployeeRemove implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "员工id")
+    @ApiModelProperty(value = "员工编号")
     private Integer eid;
 
-    @ApiModelProperty(value = "调动后部门")
-    private Integer afterDepId;
+    @ApiModelProperty(value = "培训日期")
+    private LocalDate trainDate;
 
-    @ApiModelProperty(value = "调动后职位")
-    private Integer afterJobId;
-
-    @ApiModelProperty(value = "调动日期")
-    private LocalDate removeDate;
-
-    @ApiModelProperty(value = "调动原因")
-    private String reason;
+    @ApiModelProperty(value = "培训内容")
+    private String trainContent;
 
     @ApiModelProperty(value = "备注")
     private String remark;

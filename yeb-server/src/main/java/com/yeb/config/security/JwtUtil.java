@@ -2,7 +2,6 @@ package com.yeb.config.security;
 
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +14,7 @@ import java.util.Map;
  * @date 2023/4/2 21:43
  */
 @Component
-public class JwtUtils {
+public class JwtUtil {
     private static final String CLAIM_KEY_USERNAME = "sub";
     private static final String CLAIM_KEY_CREATED = "created";
 

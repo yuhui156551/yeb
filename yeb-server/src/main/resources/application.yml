@@ -27,7 +27,7 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*Mapper.xml
-  type-aliases-package: com.yeb.pojo
+  type-aliases-package: com.yeb.domain.pojo
 
 # SQL打印（方法接口所在包）
 logging:
