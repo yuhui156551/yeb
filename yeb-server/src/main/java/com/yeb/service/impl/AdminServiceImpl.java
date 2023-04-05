@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yeb.common.RespBean;
 import com.yeb.config.security.JwtUtil;
 import com.yeb.domain.pojo.Admin;
-import com.yeb.domain.pojo.Salary;
 import com.yeb.mapper.AdminMapper;
 import com.yeb.service.IAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ import java.util.HashMap;
  * @author yuhui
  * @since 2023-04-02
  */
-@Service
+@Service("adminService")
 public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements IAdminService {
 
     @Autowired
@@ -63,7 +62,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         UsernamePasswordAuthenticationToken authenticationToken = 
                 new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-        //  返回token
+        // 生产并返回token
         String token = jwtUtil.generateToken(userDetails);
         HashMap<String, String> tokenMap = new HashMap<>();
         tokenMap.put("token", token);

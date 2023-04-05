@@ -1,0 +1,6 @@
+{
+  "timestamp": "2023-04-04T13:32:48.449+00:00",
+  "status": 401,
+  "error": "Unauthorized",
+  "path": "/hello"
+}

@@ -21,9 +21,10 @@ import java.io.IOException;
 public class RestfulAccessDeniedHandler implements AccessDeniedHandler {
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException {
-        response.setContentType("application/json;charset=UTF-8");
-        response.setStatus(403);
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("application/json");
         RespBean respBean = RespBean.error("权限不足，请联系管理员！");
+        respBean.setCode(403);
         response.getWriter().write(new ObjectMapper().writeValueAsString(respBean));
     }
 }

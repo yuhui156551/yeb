@@ -5,10 +5,10 @@ import com.yeb.domain.dto.AdminLogin;
 import com.yeb.domain.pojo.Admin;
 import com.yeb.service.IAdminService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,7 +29,7 @@ public class LoginController {
 
     @ApiOperation(value = "登录之后返回token")
     @PostMapping("/login")
-    public RespBean login(AdminLogin adminLogin, HttpServletRequest request) {
+    public RespBean login(@RequestBody AdminLogin adminLogin, HttpServletRequest request) {
         return adminService.login(adminLogin.getUsername(), adminLogin.getPassword(), request);
     }
     

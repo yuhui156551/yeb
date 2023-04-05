@@ -21,9 +21,11 @@ import java.io.IOException;
 public class RestAuthorizationEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
-        response.setContentType("application/json;charset=UTF-8");
-        response.setStatus(401);
+        authException.printStackTrace();
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("application/json");
         RespBean respBean = RespBean.error("您尚未登录，请登录!");
+        respBean.setCode(401);
         response.getWriter().write(new ObjectMapper().writeValueAsString(respBean));
     }
 }

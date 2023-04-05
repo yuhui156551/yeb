@@ -34,7 +34,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        // 获取token
+        // 获取 token
         String authHeader = request.getHeader(tokenHeader);
         // 存在 token
         if(null != authHeader && authHeader.startsWith(tokenHead)){
@@ -43,11 +43,13 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
             // token存在，但是未登录
             if(null != username && null == SecurityContextHolder.getContext().getAuthentication()){
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-                // 验证token是否有效，重新设置用户对象（类似于实现了登录）
+                // 验证token是否有效，重新设置用户对象（类似于实现了登录，后续 Security 就会使用已认证过滤器链）
                 if(jwtUtil.validateToken(authToken, userDetails)){
+                    // 如果这里没有保存用户信息到 Holder，那么访问其他资源，会获取不到用户信息，再次进入此流程，进入死循环
                     UsernamePasswordAuthenticationToken authenticationToken = 
                             new UsernamePasswordAuthenticationToken(userDetails, 
                                     null, userDetails.getAuthorities());
+                    // 将 JWT 附加信息添加到 UsernamePasswordAuthenticationToken 对象中
                     authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
                 }
