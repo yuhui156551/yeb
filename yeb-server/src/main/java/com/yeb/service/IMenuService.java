@@ -2,6 +2,7 @@ package com.yeb.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yeb.domain.pojo.Menu;
+import com.yeb.domain.pojo.Role;
 
 import java.util.List;
 
@@ -17,8 +18,13 @@ public interface IMenuService extends IService<Menu> {
 
     /**
      * 通过用户id查询菜单列表
-     * 
      * @return
      */
     List<Menu> getMenuByAdminId();
+
+    /**
+     * 根据角色查询菜单列表
+     * @return
+     */
+    List<Menu> getMenuWithRole();
 }

@@ -1,10 +1,12 @@
 package com.yeb.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yeb.common.RespBean;
+import com.yeb.domain.RespBean;
 import com.yeb.domain.pojo.Admin;
+import com.yeb.domain.pojo.Role;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * <p>
@@ -18,7 +20,6 @@ public interface IAdminService extends IService<Admin> {
 
     /**
      * 登录之后返回 token
-     *
      * @param username
      * @param password
      * @param code
@@ -33,4 +34,11 @@ public interface IAdminService extends IService<Admin> {
      * @return
      */
     Admin getAdminByUsername(String username);
+
+    /**
+     * 根据用户id获取角色列表
+     * @param adminId
+     * @return
+     */
+    List<Role> getRoles(Integer adminId);
 }

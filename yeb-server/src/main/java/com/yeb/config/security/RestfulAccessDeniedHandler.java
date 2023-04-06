@@ -1,7 +1,7 @@
 package com.yeb.config.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yeb.common.RespBean;
+import com.yeb.domain.RespBean;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;

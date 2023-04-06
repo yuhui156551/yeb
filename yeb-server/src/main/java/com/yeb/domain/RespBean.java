@@ -1,9 +1,8 @@
-package com.yeb.common;
+package com.yeb.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 公共返回对象

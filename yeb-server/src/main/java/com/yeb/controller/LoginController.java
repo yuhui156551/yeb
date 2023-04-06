@@ -1,6 +1,6 @@
 package com.yeb.controller;
 
-import com.yeb.common.RespBean;
+import com.yeb.domain.RespBean;
 import com.yeb.domain.dto.AdminLogin;
 import com.yeb.domain.pojo.Admin;
 import com.yeb.service.IAdminService;
@@ -43,6 +43,8 @@ public class LoginController {
         String username = principal.getName();
         Admin admin = adminService.getAdminByUsername(username);
         admin.setPassword(null);// 安全起见，不给前端返回密码
+        // 添加角色
+        admin.setRoles(adminService.getRoles(admin.getId()));
         return admin;
     } 
 
