@@ -64,7 +64,7 @@ public class JwtUtil {
     private Claims getClaimsFormToken(String token) {
         Claims claims = null;
         try {
-            Jwts.parser()
+            claims = Jwts.parser()
                     .setSigningKey(secret)
                     .parseClaimsJws(token)
                     .getBody();

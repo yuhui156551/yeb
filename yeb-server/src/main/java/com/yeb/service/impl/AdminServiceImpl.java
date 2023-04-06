@@ -15,6 +15,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -43,13 +44,20 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     
     /**
      * 登录之后返回 token
+     *
      * @param username
      * @param password
+     * @param code
      * @param request
      * @return
      */
     @Override
-    public RespBean login(String username, String password, HttpServletRequest request) {
+    public RespBean login(String username, String password, String code, HttpServletRequest request) {
+        // 校验验证码
+        String captcha = (String) request.getSession().getAttribute("captcha");
+        if(StringUtils.isEmpty(captcha) || !captcha.equalsIgnoreCase(code)){
+            return RespBean.error("验证码错误！");
+        }
         // 登录
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         if(null == userDetails || !passwordEncoder.matches(password, userDetails.getPassword())){
