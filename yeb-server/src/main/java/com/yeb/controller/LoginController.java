@@ -22,7 +22,7 @@ import java.security.Principal;
  * @date 2023/4/3 10:46
  */
 @RestController
-@Api(tags = "LoginController")
+@Api(tags = "用户登录")
 public class LoginController {
 
     @Autowired

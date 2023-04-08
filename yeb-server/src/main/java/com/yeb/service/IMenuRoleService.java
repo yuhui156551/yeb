@@ -1,6 +1,7 @@
 package com.yeb.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yeb.domain.RespBean;
 import com.yeb.domain.pojo.MenuRole;
 
 /**
@@ -13,4 +14,11 @@ import com.yeb.domain.pojo.MenuRole;
  */
 public interface IMenuRoleService extends IService<MenuRole> {
 
+    /**
+     * 更新角色菜单
+     * @param rid
+     * @param mids
+     * @return
+     */
+    RespBean updateMenuRole(Integer rid, Integer[] mids);
 }

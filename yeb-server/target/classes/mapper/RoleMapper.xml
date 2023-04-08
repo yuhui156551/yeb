@@ -2,4 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yeb.mapper.RoleMapper">
 
+    <select id="getRoles" resultType="com.yeb.domain.pojo.Role">
+        SELECT
+            r.id,
+            r.`name`, <!-- name是该表的一个关键字，因此需要加上反引号（`）来区分 -->
+            r.nameZh
+        FROM
+            t_role r
+                LEFT JOIN t_admin_role ar ON r.id = ar.rid
+        WHERE
+            adminId = #{adminId}
+    </select>
 </mapper>

@@ -2,6 +2,7 @@ package com.yeb.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.yeb.domain.pojo.MenuRole;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
@@ -13,4 +14,11 @@ import com.yeb.domain.pojo.MenuRole;
  */
 public interface MenuRoleMapper extends BaseMapper<MenuRole> {
 
+    /**
+     * 添加角色菜单
+     * @param rid
+     * @param mids
+     * @return
+     */
+    Integer insertRecord(@Param("rid") Integer rid, @Param("mids") Integer[] mids);
 }
