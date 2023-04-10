@@ -37,6 +37,7 @@ public class LoginController {
     @ApiOperation(value = "获取当前登录用户的信息")
     @GetMapping("/admin/info")
     public Admin getAdminInfo(Principal principal){
+        System.out.println("调用：/admin/info");
         if(null == principal){
             return null;
         }

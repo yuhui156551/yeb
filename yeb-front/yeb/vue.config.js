@@ -1,4 +1,25 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true
-})
+let proxyObj = {}
+
+// 解决跨域问题
+proxyObj['/'] = {
+  // WebSocket
+  ws: false,
+  // 目标地址
+  target: 'http://localhost:8081',
+  // 发送请求头 host 会被设置成target
+  changeOrigin: true,
+  // 不重写请求地址
+  pathRewrite: {
+    '^/': "/"
+  }
+};
+
+
+module.exports = {
+  devServer: {
+    host: 'localhost',
+    port: 8080,
+    proxy: proxyObj
+  },
+  publicPath: './'
+}
