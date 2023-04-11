@@ -1,12 +1,12 @@
 <template>
   <div>
-    基础信息设置
+    奖惩规则
   </div>
 </template>
 
 <script>
 export default {
-  name: "SysAdmin"
+  name: "EcMana"
 }
 </script>
 

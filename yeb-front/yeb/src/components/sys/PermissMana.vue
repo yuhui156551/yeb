@@ -1,6 +1,6 @@
 <template>
   <div>
-    基础信息设置
+    权限组
   </div>
 </template>
 

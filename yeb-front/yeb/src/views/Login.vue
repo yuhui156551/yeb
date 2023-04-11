@@ -64,7 +64,9 @@
                 const tokenStr = resp.obj.tokenHead + resp.obj.token;
                 window.sessionStorage.setItem("tokenStr", tokenStr);
                 // 跳转页面
-                this.$router.replace('/home');// 使用replace，无法回退页面
+                // this.$router.replace('/home');// 使用replace，无法回退页面
+                let path = this.$route.query.redirect;
+                this.$router.replace((path=='/'||path==undefined)?'/home':path);
               }
             })
           } else {

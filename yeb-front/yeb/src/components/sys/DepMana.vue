@@ -1,6 +1,6 @@
 <template>
   <div>
-    基础信息设置
+    部门管理
   </div>
 </template>
 

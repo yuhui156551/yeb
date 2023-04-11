@@ -37,7 +37,12 @@ router.beforeEach((to, from, next) => {
         next();
     } else {
         // 没有token，放行到登录页
-        next();
+        if(to.path == '/'){
+            next();
+        }else {
+            // 如果没有登录，访问的也不是登录页，那么登录成功之后直接跳转到访问的页面
+            next('/?redirect' + to.path);
+        }
     }
 })
 

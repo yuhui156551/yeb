@@ -1,6 +1,7 @@
 package com.yeb.controller;
 
 
+import com.yeb.annotation.SystemLog;
 import com.yeb.domain.RespBean;
 import com.yeb.domain.pojo.Position;
 import com.yeb.service.IPositionService;
@@ -23,7 +24,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/system/cfg/pos")
-@Api(tags = "职位管理")
+@Api(tags = "职位管理 PositionController")
 public class PositionController {
     
     @Autowired
@@ -36,6 +37,7 @@ public class PositionController {
     }
     
     @ApiOperation(value = "添加职位信息")
+    @SystemLog(businessName = "添加职位信息")
     @PostMapping("/")
     public RespBean addPosition(@RequestBody Position position){
         position.setCreateDate(LocalDateTime.now());
@@ -46,6 +48,7 @@ public class PositionController {
     }
 
     @ApiOperation(value = "更新职位信息")
+    @SystemLog(businessName = "更新职位信息")
     @PutMapping("/")
     public RespBean updatePosition(@RequestBody Position position){
         if(positionService.updateById(position)){
@@ -55,6 +58,7 @@ public class PositionController {
     }
 
     @ApiOperation(value = "删除职位信息")
+    @SystemLog(businessName = "删除职位信息")
     @DeleteMapping("/{id}")
     public RespBean deletePosition(@PathVariable Integer id){
         if(positionService.removeById(id)){

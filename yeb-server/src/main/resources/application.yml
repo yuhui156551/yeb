@@ -46,9 +46,9 @@ mybatis-plus:
     map-underscore-to-camel-case: false # 数据库字段已经是驼峰，所以这里不配置驼峰映射
 
 # SQL打印（方法接口所在包）
-logging:
-  level:
-    com.yeb.mapper: debug
+#logging:
+#  level:
+#    com.yeb.mapper: debug
 
 # jwt
 jwt:

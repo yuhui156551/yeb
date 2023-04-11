@@ -5,52 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5315f8e5-34d4-440b-a0a2-3bd42c96bccc" name="Changes" comment="路由完成，前端真难写">
-      <change afterPath="$PROJECT_DIR$/yeb-front/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/utils/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/utils/menus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/Test1.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/Test2.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/emp/EmpAdv.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/emp/EmpBasic.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/per/PerEc.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/per/PerEmp.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/per/PerMv.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/per/PerSalary.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/per/PerTrain.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sal/SalMonth.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sal/SalSearch.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sal/SalSob.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sal/SalSobCfg.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sal/SalTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sta/StaAll.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sta/StaPers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sta/StaRecord.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sta/StaScore.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysAdmin.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysBasic.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysCfg.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysData.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysInit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysLog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/components/sys/DepMana.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/components/sys/EcMana.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/components/sys/JoblevelMana.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/components/sys/PermissMana.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-front/yeb/src/components/sys/PosMana.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/yeb/Aspect/LogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/yeb/annotation/SystemLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/components/HelloWorld.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/views/AboutView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/views/HomeView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/yeb/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/yeb/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/yeb/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/yeb/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysAdmin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysBasic.vue" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-front/yeb/src/views/sys/SysBasic.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/yeb/controller/JoblevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/yeb/controller/JoblevelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/yeb/controller/PositionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/yeb/controller/PositionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/yeb/controller/JoblevelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/yeb/controller/JoblevelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/yeb/controller/PositionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/yeb/controller/PositionController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +228,8 @@
       <workItem from="1680666119772" duration="10370000" />
       <workItem from="1680760029270" duration="20707000" />
       <workItem from="1680856608374" duration="35798000" />
-      <workItem from="1681114363192" duration="5269000" />
+      <workItem from="1681114363192" duration="5289000" />
+      <workItem from="1681199895086" duration="7739000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1680429857658</created>
@@ -320,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680968585830</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="路由完成，前端真难写">
+      <created>1681129776853</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681129776853</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

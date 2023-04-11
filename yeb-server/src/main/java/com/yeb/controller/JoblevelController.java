@@ -1,6 +1,7 @@
 package com.yeb.controller;
 
 
+import com.yeb.annotation.SystemLog;
 import com.yeb.domain.RespBean;
 import com.yeb.domain.pojo.Joblevel;
 import com.yeb.service.IJoblevelService;
@@ -29,13 +30,14 @@ public class JoblevelController {
     @Autowired
     private IJoblevelService joblevelService;
 
-    @ApiOperation(value = "获取所有职称")
+    @ApiOperation(value = "获取所有职称") 
     @GetMapping("/")
     public List<Joblevel> getAllJobLevel() {
         return joblevelService.list();
     }
 
     @ApiOperation(value = "添加职称")
+    @SystemLog(businessName = "添加职称")
     @PostMapping("/")
     public RespBean addJobLevel(@RequestBody Joblevel joblevel) {
         joblevel.setCreateDate(LocalDateTime.now());
@@ -46,6 +48,7 @@ public class JoblevelController {
     }
 
     @ApiOperation(value = "修改职称")
+    @SystemLog(businessName = "修改职称")
     @PutMapping("/")
     public RespBean updateJobLevel(@RequestBody Joblevel joblevel) {
         if (joblevelService.updateById(joblevel)) {
@@ -55,6 +58,7 @@ public class JoblevelController {
     }
 
     @ApiOperation(value = "删除职称信息")
+    @SystemLog(businessName = "删除职称信息")
     @DeleteMapping("/{id}")
     public RespBean deletePosition(@PathVariable Integer id) {
         if (joblevelService.removeById(id)) {
@@ -64,6 +68,7 @@ public class JoblevelController {
     }
 
     @ApiOperation(value = "批量删除职称信息")
+    @SystemLog(businessName = "批量删除职称信息")
     @DeleteMapping("/")
     public RespBean deletePosition(Integer[] ids) {
         if (joblevelService.removeByIds(Arrays.asList(ids))) {
