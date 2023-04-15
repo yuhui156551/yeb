@@ -15,7 +15,7 @@
           border
           @selection-change="handleSelectionChange"
           :data="positions"
-          style="width: 70%"
+          style="width: 777px"
           class="posManaMain">
         <el-table-column
             type="selection"
@@ -36,12 +36,17 @@
             label="创建时间"
             width="150">
         </el-table-column>
-<!--        <el-table-column-->
-<!--            prop="enabled"-->
-<!--            label="是否启用"-->
-<!--            width="120">-->
-<!--        </el-table-column>-->
         <el-table-column
+            prop="enabled"
+            label="是否启用"
+            width="150">
+          <template slot-scope="scope">
+            <el-tag type="success" v-if="scope.row.enabled">已启用</el-tag>
+            <el-tag type="danger" v-else >未启用</el-tag>
+          </template>
+        </el-table-column>
+        <el-table-column
+            width="150px"
             label="操作">
           <template slot-scope="scope">
             <el-button
@@ -66,6 +71,17 @@
         <el-tag>职位名称</el-tag>
         <el-input v-model="updatePos.name" class="updatePosInput"></el-input>
       </div>
+      <div>
+        <el-tag style="margin-top: 10px">是否启用</el-tag>
+        <el-switch
+            style="margin-left: 10px"
+            v-model="updatePos.enabled"
+            active-color="#13ce66"
+            inactive-color="#ff4949"
+            active-text="已启用"
+            inactive-text="未启用">
+        </el-switch>
+      </div>
       <span slot="footer" class="dialog-footer">
     <el-button @click="dialogVisible = false">取 消</el-button>
     <el-button type="primary" @click="doUpdate">确 定</el-button>
@@ -86,6 +102,7 @@
         dialogVisible: false,
         updatePos:{
           name:'',
+          enabled:''
         },
         multipleSelection: []
       }
@@ -146,6 +163,7 @@
       },
       // 编辑
       handleEdit(index,data){
+        data.createDate = '';
         // this.updatePos = data;
         Object.assign(this.updatePos, data);
         this.dialogVisible = true;

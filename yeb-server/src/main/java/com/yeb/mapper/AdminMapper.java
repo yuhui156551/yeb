@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.yeb.domain.pojo.Admin;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * <p>
  *  Mapper 接口
@@ -15,4 +17,11 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface AdminMapper extends BaseMapper<Admin> {
 
+    /**
+     * 获取所有操作员
+     * @param id
+     * @param keywords
+     * @return
+     */
+    List<Admin> getAllAdmin(Integer id, String keywords);
 }

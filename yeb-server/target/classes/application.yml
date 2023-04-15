@@ -39,6 +39,13 @@ spring:
 #        max-idle: 200 # 最大空闲连接
 #        min-idle: 5 # 最小空闲连接
 
+  # rabbitmq 配置 
+  rabbitmq:
+    host: 192.168.44.100
+    port: 5672
+    username: yuhui
+    password: 123321
+
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*Mapper.xml
   type-aliases-package: com.yeb.domain.pojo
@@ -46,9 +53,9 @@ mybatis-plus:
     map-underscore-to-camel-case: false # 数据库字段已经是驼峰，所以这里不配置驼峰映射
 
 # SQL打印（方法接口所在包）
-logging:
-  level:
-    com.yeb.mapper: debug
+#logging:
+#  level:
+#    com.yeb.mapper: debug
 
 # jwt
 jwt:

@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+  mail:
+    host: smtp.qq.com
+    protocol: smtp
+    password: rvkagugzekgmbhhb
+    username: 536430462@qq.com
+    port: 465
+    
+  rabbitmq:
+    host: 192.168.44.100
+    port: 5672
+    username: yuhui
+    password: 123321

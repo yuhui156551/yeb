@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
  * @author yuhui
  * @date 2023/4/7 20:12
  */
-@Api(tags = "权限组")
+@Api(tags = "权限组 PermissionController")
 @RestController
 @RequestMapping("/system/basic/permiss")
 public class PermissionController {

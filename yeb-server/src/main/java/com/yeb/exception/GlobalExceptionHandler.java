@@ -32,11 +32,11 @@ public class GlobalExceptionHandler {
     /**
      * 其他异常
      */
-//    @ExceptionHandler(Exception.class)
-//    public RespBean exceptionHandler(Exception e) {
-//        // 打印异常信息
-//        log.error("出现了异常！", e);
-//        // 从异常对象中获取提示信息封装返回
-//        return RespBean.error(e.getMessage());
-//    }
+    @ExceptionHandler(RuntimeException.class)
+    public RespBean exceptionHandler(RuntimeException e) {
+        // 打印异常信息
+        log.error("出现了异常！", e);
+        // 从异常对象中获取提示信息封装返回
+        return RespBean.error(e.getMessage());
+    }
 }

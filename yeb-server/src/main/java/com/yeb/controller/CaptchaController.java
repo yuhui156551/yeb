@@ -20,7 +20,7 @@ import java.io.IOException;
  * http://localhost:8081/captcha
  */
 @RestController
-@Api(tags = "生成验证码")
+@Api(tags = "生成验证码 CaptchaController")
 public class CaptchaController {
     @Autowired
     private DefaultKaptcha defaultKaptcha;

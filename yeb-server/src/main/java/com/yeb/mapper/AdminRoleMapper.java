@@ -13,4 +13,11 @@ import com.yeb.domain.pojo.AdminRole;
  */
 public interface AdminRoleMapper extends BaseMapper<AdminRole> {
 
+    /**
+     * 添加操作员角色
+     * @param adminId
+     * @param rids
+     * @return
+     */
+    Integer addAdminRole(Integer adminId, Integer[] rids);
 }
