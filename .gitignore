@@ -4,6 +4,6 @@ target
 
 .vscode
 
-.mvn/wrapper
+.mvn
 
 test
