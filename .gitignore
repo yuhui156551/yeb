@@ -1,4 +1,8 @@
+### IntelliJ IDEA ###
 .idea
+*.iws
+*.iml
+*.ipr
 
 target
 
@@ -8,4 +12,3 @@ target
 
 test
 
-*.iml
