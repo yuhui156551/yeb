@@ -1,6 +1,7 @@
 package com.yeb.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.yeb.annotation.SystemLog;
 import com.yeb.domain.RespBean;
 import com.yeb.domain.pojo.Menu;
 import com.yeb.domain.pojo.MenuRole;
@@ -41,6 +42,7 @@ public class PermissionController {
     }
 
     @ApiOperation(value = "添加角色")
+    @SystemLog(businessName = "添加角色")
     @PostMapping("/")
     public RespBean addRole(@RequestBody Role role) {
         if (!role.getName().startsWith("ROLE_")) {
@@ -53,6 +55,7 @@ public class PermissionController {
     }
 
     @ApiOperation(value = "删除角色")
+    @SystemLog(businessName = "删除角色")
     @DeleteMapping("/role/{rid}")
     public RespBean deletePosition(@PathVariable Integer rid) {
         if (roleService.removeById(rid)) {
@@ -76,6 +79,7 @@ public class PermissionController {
     }
     
     @ApiOperation(value = "更新角色菜单")
+    @SystemLog(businessName = "更新角色菜单")
     @PutMapping("/")
     public RespBean updateMenuRole(Integer rid, Integer[] mids){
         return menuRoleService.updateMenuRole(rid, mids);

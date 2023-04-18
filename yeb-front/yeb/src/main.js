@@ -11,6 +11,7 @@ import {putRequest} from "@/utils/api";
 import {deleteRequest} from "@/utils/api";
 
 import {initMenu} from "@/utils/menus";
+import {downloadRequest} from "@/utils/download";
 
 
 Vue.config.productionTip = false
@@ -19,6 +20,7 @@ Vue.prototype.getRequest = getRequest
 Vue.prototype.postRequest = postRequest
 Vue.prototype.putRequest = putRequest
 Vue.prototype.deleteRequest = deleteRequest
+Vue.prototype.downloadRequest = downloadRequest
 
 // 全局路由守卫
 router.beforeEach((to, from, next) => {

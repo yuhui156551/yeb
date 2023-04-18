@@ -1,6 +1,7 @@
 package com.yeb.controller;
 
 
+import com.yeb.annotation.SystemLog;
 import com.yeb.domain.RespBean;
 import com.yeb.domain.pojo.Salary;
 import com.yeb.service.ISalaryService;
@@ -34,6 +35,7 @@ public class SalaryController {
     }
 
     @ApiOperation(value = "添加工资账套")
+    @SystemLog(businessName = "添加工资账套")
     @PostMapping("/")
     public RespBean addSalary(@RequestBody Salary salary) {
         salary.setCreateDate(LocalDateTime.now());
@@ -44,6 +46,7 @@ public class SalaryController {
     }
 
     @ApiOperation(value = "删除工资账套")
+    @SystemLog(businessName = "删除工资账套")
     @DeleteMapping("/{id}")
     public RespBean deleteSalary(@PathVariable Integer id) {
         if (salaryService.removeById(id)) {
@@ -54,6 +57,7 @@ public class SalaryController {
 
 
     @ApiOperation(value = "更新工资账套")
+    @SystemLog(businessName = "更新工资账套")
     @PutMapping("/")
     public RespBean updateSalary(@RequestBody Salary salary) {
         if (salaryService.updateById(salary)) {

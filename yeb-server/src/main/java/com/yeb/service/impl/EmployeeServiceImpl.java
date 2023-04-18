@@ -82,7 +82,6 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
             // 发送消息
             Employee emp = baseMapper.getEmployee(employee.getId()).get(0);
             rabbitTemplate.convertAndSend("mail.welcome", emp);
-            
             return RespBean.success("添加成功！");
         }
         return RespBean.error("添加失败！");

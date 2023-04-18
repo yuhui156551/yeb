@@ -1,6 +1,7 @@
 package com.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yeb.Utils.AdminUtil;
 import com.yeb.domain.pojo.Admin;
 import com.yeb.domain.pojo.Menu;
 import com.yeb.domain.pojo.Role;
@@ -36,7 +37,7 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IM
     @Override
     public List<Menu> getMenuByAdminId() {
         // 从 SecurityContextHolder 获取用户信息
-        Integer adminId = ((Admin) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId();
+        Integer adminId = AdminUtil.getCurrentAdmin().getId();
         // 从 redis 获取数据
         List<Menu> menus = (List<Menu>) redisTemplate.opsForValue().get("menu_" + adminId);
         // 如果在 redis 中获取不到，就从数据库获取，并将数据存入 redis

@@ -24,7 +24,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("system/basic/joblevel")
-@Api(tags = "职称管理")
+@Api(tags = "职称管理 JoblevelController")
 public class JoblevelController {
 
     @Autowired

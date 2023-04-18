@@ -68,6 +68,7 @@ public class PositionController {
     }
 
     @ApiOperation(value = "批量删除职位信息")
+    @SystemLog(businessName = "批量删除职位信息")
     @DeleteMapping("/")
     public RespBean deletePosition(Integer[] ids){
         if(positionService.removeByIds(Arrays.asList(ids))){

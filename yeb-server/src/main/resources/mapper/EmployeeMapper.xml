@@ -17,7 +17,7 @@
         <result column="phone" property="phone"/>
         <result column="address" property="address"/>
         <result column="departmentId" property="departmentId"/>
-        <result column="job_levelId" property="jobLevelId"/>
+        <result column="jobLevelId" property="jobLevelId"/>
         <result column="posId" property="posId"/>
         <result column="engageForm" property="engageForm"/>
         <result column="tiptopDegree" property="tiptopDegree"/>
@@ -25,10 +25,10 @@
         <result column="school" property="school"/>
         <result column="beginDate" property="beginDate"/>
         <result column="workState" property="workState"/>
-        <result column="workId" property="workID"/>
+        <result column="workId" property="workId"/>
         <result column="contractTerm" property="contractTerm"/>
         <result column="conversionTime" property="conversionTime"/>
-        <result column="notWorkDate" property="notWorkDate"/>
+        <result column="notWorkDate" property="notworkDate"/>
         <result column="beginContract" property="beginContract"/>
         <result column="endContract" property="endContract"/>
         <result column="workAge" property="workAge"/>

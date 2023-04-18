@@ -3,6 +3,7 @@ package com.yeb.controller;
 
 import com.yeb.domain.pojo.Menu;
 import com.yeb.service.IMenuService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/system/cfg")
+@Api(tags = "菜单表 MenuController")
 public class MenuController {
 
     @Autowired

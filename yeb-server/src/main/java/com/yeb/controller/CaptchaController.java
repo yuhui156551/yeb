@@ -26,7 +26,7 @@ public class CaptchaController {
     private DefaultKaptcha defaultKaptcha;
 
     @ApiOperation(value = "验证码")
-    @GetMapping(value = "/captcha", produces = "image/jpeg")// 设置返回值类型
+    @GetMapping(value = "/captcha", produces = "image/jpeg")// 设置返回值类型，使得 Swagger 文档获取结果不乱码
     public void captcha(HttpServletRequest request, HttpServletResponse response) {
         // 定义 response 输出类型为 image/jpeg 类型
         response.setDateHeader("Expires", 0);

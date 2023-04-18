@@ -46,6 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService()).passwordEncoder(passwordEncoder());
     }
 
+    // 测试一些功能
     public static void main(String[] args) {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         String encode = bCryptPasswordEncoder.encode("123");
@@ -78,7 +79,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 "/swagger-resources/**",        // 放行 swagger 资源
                 "/v2/api-docs/**",              // 放行 swagger 资源
                 "/captcha",      // 验证码接口
-                "/ws/**"
+                "/ws/**"         // WebSocket 接口
         );
     }
 

@@ -52,6 +52,7 @@
         </collection>
     </resultMap>
     
+    <!-- 根据用户id获取菜单列表 -->
     <select id="getMenuByAdminId" resultMap="Menus">
         SELECT DISTINCT
             m1.*,
@@ -79,6 +80,7 @@
         ORDER BY
             m2.id
     </select>
+    
     <!-- 根据角色查询菜单列表 -->
     <select id="getMenuWithRole" resultMap="MenusWithRole">
         SELECT
@@ -96,6 +98,7 @@
         ORDER BY
             m.id
     </select>
+    
     <!-- 查询所有菜单 -->
     <select id="getAllMenu" resultMap="MenusWithChildren">
         SELECT

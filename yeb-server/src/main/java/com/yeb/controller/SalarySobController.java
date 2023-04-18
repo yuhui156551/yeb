@@ -1,12 +1,14 @@
 package com.yeb.controller;
 
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.yeb.annotation.SystemLog;
 import com.yeb.domain.RespBean;
 import com.yeb.domain.RespPage;
 import com.yeb.domain.pojo.Employee;
 import com.yeb.domain.pojo.Salary;
 import com.yeb.service.IEmployeeService;
 import com.yeb.service.ISalaryService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +23,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/salary/sobcfg")
+@Api(tags = "员工账套 SalarySobController")
 public class SalarySobController {
 
     @Autowired
@@ -43,9 +46,10 @@ public class SalarySobController {
     }
 
     @ApiOperation(value = "更新员工账套")
+    @SystemLog(businessName = "更新员工账套")
     @PutMapping("/")
     public RespBean updateEmployeeSalary(Integer eid, Integer sid) {
-        boolean update = employeeService.update(new UpdateWrapper<Employee>().set("salary_id", sid).eq("id", eid));
+        boolean update = employeeService.update(new UpdateWrapper<Employee>().set("salaryId", sid).eq("id", eid));
         if (update) {
             return RespBean.success("更新成功！");
         }

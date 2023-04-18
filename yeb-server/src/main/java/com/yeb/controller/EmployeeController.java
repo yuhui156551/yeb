@@ -11,6 +11,7 @@ import com.yeb.domain.RespBean;
 import com.yeb.domain.RespPage;
 import com.yeb.domain.pojo.*;
 import com.yeb.service.*;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.models.auth.In;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -22,12 +23,14 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 /**
  * <p>
- * 员工表
+ * 员工管理
  * </p>
  *
  * @author yuhui
@@ -35,6 +38,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/employee/basic")
+@Api(tags = "员工管理 EmployeeController")
 public class EmployeeController {
     
     @Autowired
@@ -78,7 +82,7 @@ public class EmployeeController {
     }
 
     @ApiOperation(value = "获取所有职位")
-    @GetMapping("/Positions")
+    @GetMapping("/positions")
     public List<Position> getAllPositions() {
         return positionService.list();
     }
@@ -106,6 +110,17 @@ public class EmployeeController {
     @SystemLog(businessName = "更新员工")
     @PutMapping("/")
     public RespBean updateEmp(@RequestBody Employee employee) {
+        // 要更新合同期限
+        LocalDate beginDate = employee.getBeginDate();
+        LocalDate endContract = employee.getEndContract();
+        // 计算相差多少天
+        long days = beginDate.until(endContract, ChronoUnit.DAYS);
+        // 保留两位小数
+        DecimalFormat decimalFormat = new DecimalFormat("##.00");
+        // 转换为 年 为单位
+        String format = decimalFormat.format(days / 365.00);
+        // 设置在职年限
+        employee.setContractTerm(Double.parseDouble(format));
         // 没有与其他表有 中间表 连接，因此不用更新 中间表，直接更新 employee 这个表就行
         if (employeeService.updateById(employee)) {
             return RespBean.success("更新成功！");

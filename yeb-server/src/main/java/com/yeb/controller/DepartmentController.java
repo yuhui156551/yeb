@@ -31,6 +31,7 @@ public class DepartmentController {
     @ApiOperation(value = "获取所有部门")
     @GetMapping("/")
     public List<Department> getAllDepartment(){
+        // 后续会传递 -1 作为 parentId，随后进行递归查询，获取树结构
         return departmentService.getAllDepartment();
     }
     
